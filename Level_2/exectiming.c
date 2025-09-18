@@ -27,10 +27,10 @@ int main(int argc, char *argv[]){
         gettimeofday(&end, NULL);
 
         // calcula diferença em segundos e microssegundos
-        double elapsed = (end.tv_sec - start.tv_sec) +
-                         (end.tv_usec - start.tv_usec) / 1000000.0;
+        double time = (end.tv_sec - start.tv_sec) +
+                      (end.tv_usec - start.tv_usec) / 1000000.0;
 
-        printf("Tempo de execução: %.6f segundos\n", elapsed);
+        printf("Tempo de execução: %.6f segundos\n", time);
     } else {
         perror("fork falhou");
         return 1;
